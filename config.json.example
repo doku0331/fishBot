@@ -2,5 +2,16 @@
   "serverId": "",
   "setRoleChannel": "",
   "clientId": "",
-  "devs": []
+  "owners": [],
+  "reaction_roles": [
+    {
+      "message": 11111,
+      "roles": [
+        {
+          "sticker": "\uD83C\uDDEE",
+          "role": 111111
+        }
+      ]
+    }
+  ]
 }

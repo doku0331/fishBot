@@ -5,11 +5,14 @@ const getLocalCommands = require("../../utils/getLocalCommands");
 
 module.exports = async (client) => {
   try {
+    //取得現有的指令
     const localCommands = getLocalCommands();
+    //取得目標伺服器上的指令
     const applicationCommands = await getApplicationCommands(
       client,
       testServer
     );
+
     for (const localCommand of localCommands) {
       const { name, description, options } = localCommand;
 
@@ -46,7 +49,7 @@ module.exports = async (client) => {
           options,
         });
 
-        console.log(`👍 Registered command "${name}."`);
+        console.log(`👍 Registered command "${name}"`);
       }
     }
   } catch (error) {
