@@ -48,6 +48,7 @@ module.exports = (client) => {
       "還不錯?",
       "哀斗...",
       "凹ㄨ....",
+      "等等回來 我先洗澡",
     ];
     message.reply(
       defaultReply[Math.floor(Math.random() * defaultReply.length)]
