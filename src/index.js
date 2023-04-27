@@ -1,7 +1,7 @@
 require("dotenv").config();
 const { Client, IntentsBitField, Events, Partials } = require("discord.js");
 const eventHandler = require("./handlers/eventHandler");
-const reactionRoleEvent = require("./service/roleService.js/reactionRoleEvent");
+const serviceHandler = require("./handlers/serviceHandler");
 
 const client = new Client({
   intents: [
@@ -23,4 +23,4 @@ client.once(Events.ClientReady, (c) => {
 });
 
 //執行每次都會跑的服務
-reactionRoleEvent(client);
+serviceHandler(client);
