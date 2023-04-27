@@ -1,5 +1,10 @@
 const { Events } = require("discord.js");
 
+/**
+ * 聊天功能
+ * TODO: 把聊天訊息跟回應抽出來 讓外部注入
+ * @param {*} client 機器人本體
+ */
 module.exports = (client) => {
   client.on(Events.MessageCreate, async (message) => {
     //判斷不回應的條件訊息
@@ -20,6 +25,7 @@ module.exports = (client) => {
       message.reply("愛過 沒錢 不約");
       return;
     }
+
     //回應吃啥
     if (text.includes("吃什麼") || text.includes("吃啥")) {
       const food = ["吃屎", "摩斯漢堡", "麥當勞", "爭鮮", "永和豆漿"];
